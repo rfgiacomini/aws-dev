@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "bucket-s3-version" {
-  bucket = "Buckets3-versionador"
+  bucket = "buckets3-versionador"
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
