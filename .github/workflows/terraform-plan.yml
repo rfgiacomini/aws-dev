@@ -18,7 +18,8 @@ jobs:
       run: |
         terraform init
         terraform validate
-        terraform plan
-    - name: Terraform Plan
+        terraform plan -refresh-only
+
+    - name: Terraform Apply
       run: |
         terraform apply -auto-approve
