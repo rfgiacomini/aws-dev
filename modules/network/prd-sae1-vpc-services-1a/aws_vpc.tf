@@ -1,4 +1,3 @@
-depends_on = [module.s3.aws_s3_bucket.bucket-s3-version]
 resource "aws_vpc" "aws_name_vpc" {
   cidr_block           = var.cidr_block
   enable_dns_support   = true
