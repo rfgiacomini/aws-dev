@@ -8,7 +8,7 @@ terraform {
   
   backend "s3" {
     bucket = "terraform-aws-versioning"
-    key    = "vpc_state/terraform.tfstate"
+    key    = "vpc_save_state/terraform.tfstate"
     region = "us-east-1"
   }
 }
