@@ -7,7 +7,7 @@ resource "aws_instance" "vm" {
   ami                         = "ami-0e2c8caa4b6378d8c"
   instance_type               = "t2.micro"
   key_name                    = aws_key_pair.key.key_name
-  subnet_id                   = "subnet-00b0a44763c68a7b7"
+  subnet_id                   = "subnet-0ab92fc4e088799ed"
   vpc_security_group_ids      = [aws_security_group.security_group.id]
   associate_public_ip_address = true
 
