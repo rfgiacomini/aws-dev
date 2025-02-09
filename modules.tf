@@ -13,7 +13,7 @@ module "prd-sae1-ec2-datacenter" {
   tags   = local.tags
 }
 
-#module "prd-sae1-ec2-datacenter02" {
-#  source = "./modules/ec2/prd-sae1-ec2-datacenter02"
-#  tags   = local.tags
-#}
+module "prd-sae1-ec2-datacenter02" {
+  source = "./modules/ec2/prd-sae1-ec2-datacenter02"
+  tags   = local.tags
+}
