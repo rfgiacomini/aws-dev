@@ -18,3 +18,12 @@ resource "aws_instance" "vm" {
   }
 }
 
+data "terraform_remote_state" "vpc" {
+  backend = "s3"
+  config = {
+    bucket = "terraform-aws-versioning "
+    key    = "terraform-aws-versioning/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
