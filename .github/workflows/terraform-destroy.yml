@@ -18,4 +18,4 @@ jobs:
     - name: Terraform Destroy
       run: |
         terraform init
-        terraform destroy -refresh-only -auto-approve
+        terraform destroy -auto-approve
