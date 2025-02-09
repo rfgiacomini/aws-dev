@@ -3,7 +3,7 @@ resource "aws_vpc" "aws_name_vpc" {
   cidr_block           = var.cidr_block
   enable_dns_support   = true
   enable_dns_hostnames = true
-  
+
 
   tags = merge(
     var.tags,
