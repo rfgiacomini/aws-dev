@@ -36,3 +36,8 @@ module "prd-sae1-vpc-services-1a" {
   }
 }
 
+module "aws_profixlist_google" {
+  source = "../../prefix-list"
+  # Outros parâmetros do módulo profix-list
+}
+

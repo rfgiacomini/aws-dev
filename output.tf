@@ -18,4 +18,8 @@ output "aws_vpc_1b" {
 
 }
 
+output "aws_profixlist_google" {
+  value = module.aws_profixlist_google.aws_profixlist_google
+}
+
 

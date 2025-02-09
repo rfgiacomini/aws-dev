@@ -13,11 +13,11 @@ module "prd-sae1-ec2-datacenter" {
   tags   = local.tags
 }
 
-#module "prd-sae1-ec2-datacenter02" {
-#  source = "./modules/ec2/prd-sae1-ec2-datacenter02"
-#  tags   = local.tags
-#}
+module "prd-sae1-ec2-datacenter02" {
+  source = "./modules/ec2/prd-sae1-ec2-datacenter02"
+  tags   = local.tags
+}
 
-module "prefix_list_id" {
+module "aws_profixlist_google" {
   source = "./modules/prefix-list"
 }

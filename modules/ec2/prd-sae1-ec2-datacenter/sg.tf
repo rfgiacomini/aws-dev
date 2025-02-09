@@ -5,11 +5,11 @@ resource "aws_security_group" "security_group" {
   depends_on  = [module.prd-sae1-vpc-services-1a.aws_vpc]
 
   ingress {
-    description = "SSH"
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    prefix_list_ids = ["pl-04c4862da22b2d062"]
+    description     = "Allow google ips SSH"
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
+    prefix_list_ids = [module.aws_profixlist_google.aws_profixlist_google]
   }
 
   ingress {
@@ -28,7 +28,7 @@ resource "aws_security_group" "security_group" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-    ingress {
+  ingress {
     description = "SSH"
     from_port   = 22
     to_port     = 22
