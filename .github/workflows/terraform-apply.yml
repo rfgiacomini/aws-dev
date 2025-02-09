@@ -18,4 +18,4 @@ jobs:
     - name: Terraform Apply
       run: |
         terraform init
-        terraform apply -auto-approve
+        terraform apply -refresh-only -auto-approve
