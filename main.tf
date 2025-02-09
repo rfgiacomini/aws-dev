@@ -5,6 +5,11 @@ terraform {
       version = "5.86.0"
     }
   }
+  backend "s3" {
+    bucket = "terraform-aws-version"
+    key    = "aws-ec2-modules/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
@@ -15,14 +20,5 @@ provider "aws" {
       owner      = "rfgiacomini"
       managed-by = "terraform"
     }
-  }
-}
-
-data "terraform_remote_state" "vpc" {
-  backend = "s3"
-  config = {
-    bucket = "rfterraform-bucket"
-    key    = "aws-vpc/terraform.tfstate"
-    region = "us-east-1"
   }
 }
