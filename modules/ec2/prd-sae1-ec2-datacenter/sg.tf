@@ -9,7 +9,7 @@ resource "aws_security_group" "security_group" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    prefix_list_ids = "pl-04c4862da22b2d062"
+    prefix_list_ids = ["pl-04c4862da22b2d062"]
   }
 
   ingress {
