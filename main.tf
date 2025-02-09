@@ -7,7 +7,7 @@ terraform {
   }
   
   backend "s3" {
-    bucket = "cursoterraform-kubernets"
+    bucket = "terraform-aws-versioning"
     key    = "terraform-aws-versioning/terraform.tfstate"
     region = "us-east-1"
   }

@@ -1,7 +1,7 @@
 resource "aws_security_group" "security_group" {
   name        = "${var.ec2_name_instance}-security_group-${var.ec2_name_instance_id}"
   description = "Permitir acesso na porta 22"
-  vpc_id      = module.prd-sae1-vpc-services-1a.aws_vpc_name_1a.id
+  vpc_id      = [data.terraform_remote_state.vpc.outputs.security_group_id]
 
   ingress {
     description = "SSH"
