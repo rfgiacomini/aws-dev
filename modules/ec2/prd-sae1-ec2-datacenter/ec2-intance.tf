@@ -27,3 +27,12 @@ data "terraform_remote_state" "vpc" {
   }
 }
 
+module "prd-sae1-vpc-services-1a" {
+  source = "../../network/prd-sae1-vpc-services-1a"
+  # Outros parâmetros do módulo VPC
+  tags = {
+    Name        = "prd-sae1-vpc"
+    Environment = "Dev"
+  }
+}
+
