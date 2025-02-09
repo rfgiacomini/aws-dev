@@ -1,10 +1,8 @@
-resource "aws_s3_bucket" "bucket-s3-version" {
-  bucket = "buckets3-versionador"
-}
+resource "aws_s3_bucket" "teste_initial" {
+  bucket = "test-initial"
 
-resource "aws_s3_bucket_versioning" "versioning" {
-  bucket = aws_s3_bucket.bucket-s3-version.id
-  versioning_configuration {
-    status = "Enabled"
+  tags = {
+    Name        = "test-initial"
+    Environment = "Dev"
   }
 }
