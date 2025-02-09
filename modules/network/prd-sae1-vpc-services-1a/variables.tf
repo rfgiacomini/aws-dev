@@ -26,3 +26,4 @@ variable "ec2_name_instance" {
   default = "prd-sae1-ec2-datacenter"
 }
 
+
