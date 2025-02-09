@@ -5,6 +5,12 @@ terraform {
       version = "5.86.0"
     }
   }
+  
+  backend "s3" {
+    bucket = "cursoterraform-kubernets"
+    key    = "terraform-aws-versioning/terraform.tfstate"
+    region = "us-east-1"
+  }
 }
 
 provider "aws" {
