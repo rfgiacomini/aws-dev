@@ -5,10 +5,9 @@ terraform {
       version = "5.86.0"
     }
   }
-  
   backend "s3" {
-    bucket = "terraform-aws-versioning"
-    key    = "vpc_state/terraform.tfstate"
+    bucket = "aws-dev-modules"
+    key    = "aws-vpc/terraform.tfstate"
     region = "us-east-1"
   }
 }
