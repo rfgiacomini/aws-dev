@@ -19,7 +19,3 @@ jobs:
         terraform init
         terraform validate
         terraform plan -refresh-only
-
-    - name: Terraform Apply
-      run: |
-        terraform apply -refresh-only -auto-approve
