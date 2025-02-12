@@ -19,8 +19,8 @@ module "prd-sae1-vpc-services-1b" {
 #}
 
 module "aws_profixlist_google" {
-  source = "./modules/prefix-list/google/prefix-list"
+  source = "./modules/prefix-list/google/"
 }
 module "aws_profixlist_escritorio" {
-  source = "./modules/prefix-list/escritorio/prefix-list"
+  source = "./modules/prefix-list/escritorio/"
 }
