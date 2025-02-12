@@ -19,5 +19,5 @@ module "prd-sae1-vpc-services-1b" {
 #}
 
 module "aws_profixlist_google" {
-  source = "./modules/prefix-list"
+  source = "./modules/google/prefix-list"
 }

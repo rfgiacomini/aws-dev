@@ -1,7 +1,3 @@
-output "aws_profixlist_google" {
-  value = aws_ec2_managed_prefix_list.google.id
-}
-
 output "aws_profixlist_escritorio" {
   value = aws_ec2_managed_prefix_list.escritorio.id
 }
