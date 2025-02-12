@@ -18,5 +18,16 @@ output "aws_vpc_1b" {
 
 }
 
+output "prefix-list-google" {
+  value = module.aws_profixlist_google.aws_profixlist_google
+
+}
+
+output "prefix-list-escritorio" {
+  value = module.aws_profixlist_escritorio.aws_profixlist_escritorio
+
+}
+
+
 
 
