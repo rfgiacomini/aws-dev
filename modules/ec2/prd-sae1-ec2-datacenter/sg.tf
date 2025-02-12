@@ -9,7 +9,15 @@ resource "aws_security_group" "security_group" {
     from_port       = 22
     to_port         = 22
     protocol        = "tcp"
-    prefix_list_ids = [module.aws_profixlist_google.aws_profixlist_google, module.aws_profixlist_google.aws_profixlist_escritorio]
+    prefix_list_ids = [module.aws_profixlist_google.aws_profixlist_google]
+  }
+
+  ingress {
+    description     = "Allow google ips SSH"
+    from_port       = 22
+    to_port         = 22
+    protocol        = "tcp"
+    prefix_list_ids = [module.aws_profixlist_escritorio.aws_profixlist_escritorio]
   }
 
   ingress {
