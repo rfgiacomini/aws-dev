@@ -21,7 +21,7 @@ resource "aws_ec2_managed_prefix_list_entry" "google-ip2" {
 }
 
 
-resource "aws_ec2_managed_prefix_list" "Escritorio" {
+resource "aws_ec2_managed_prefix_list" "escritorio" {
   name           = "All Escritorio CIDR-s"
   address_family = "IPv4"
   max_entries    = 5
