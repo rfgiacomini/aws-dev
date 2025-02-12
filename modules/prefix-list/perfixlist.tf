@@ -27,12 +27,12 @@ resource "aws_ec2_managed_prefix_list" "escritorio" {
   max_entries    = 5
 
   tags = {
-    Env = "live"
+    Env = "Escritorio"
   }
 }
 
 resource "aws_ec2_managed_prefix_list_entry" "escritorio" {
   cidr           = "192.168.25.0/24"
-  description    = "Primary Google"
+  description    = "Primary escritorio"
   prefix_list_id = aws_ec2_managed_prefix_list.google.id
 }
