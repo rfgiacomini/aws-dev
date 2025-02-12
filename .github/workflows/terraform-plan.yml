@@ -1,5 +1,10 @@
 name: Terraform Plan
-on: push
+on:
+  push:
+    branches:
+      - "*"
+    ignore:
+      - main  # O job será acionado para qualquer nova branch, exceto 'main'
 env:
   AWS_ACCESS_KEY_ID: ${{secrets.AWS_ACCESS_KEY_ID}}
   AWS_SECRET_ACCESS_KEY: ${{secrets.AWS_SECRET_ACCESS_KEY}}
