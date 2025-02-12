@@ -13,7 +13,7 @@ resource "aws_security_group" "security_group" {
   }
 
   ingress {
-    description     = "Allow google ips SSH"
+    description     = "Allow Escritorio ips SSH"
     from_port       = 22
     to_port         = 22
     protocol        = "tcp"
