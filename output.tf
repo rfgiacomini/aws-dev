@@ -23,3 +23,7 @@ output "aws_profixlist_google" {
 }
 
 
+output "aws_profixlist_escritorio" {
+  value = module.aws_profixlist_google.aws_profixlist_escritorio
+}
+

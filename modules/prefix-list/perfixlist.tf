@@ -19,3 +19,20 @@ resource "aws_ec2_managed_prefix_list_entry" "google-ip2" {
   description    = "Primary Google"
   prefix_list_id = aws_ec2_managed_prefix_list.google.id
 }
+
+
+resource "aws_ec2_managed_prefix_list" "Escritorio" {
+  name           = "All Escritorio CIDR-s"
+  address_family = "IPv4"
+  max_entries    = 5
+
+  tags = {
+    Env = "live"
+  }
+}
+
+resource "aws_ec2_managed_prefix_list_entry" "escritorio" {
+  cidr           = "192.168.25.0/24"
+  description    = "Primary Google"
+  prefix_list_id = aws_ec2_managed_prefix_list.google.id
+}
